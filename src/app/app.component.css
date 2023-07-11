@@ -1,0 +1,27 @@
+.navbar .navbar-brand{
+    color: black;
+    font-weight:bold ;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color:black ;
+}
+.navbar{
+    background-color: lightpink;
+    opacity: 0.7;
+}
+
+.navbar-nav .nav-item{
+    margin-left: 10px;
+    
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    background-color: coral;
+    border: 1px solid;
+    border-radius: 48px;
+}
+
+button{
+    margin-right: 5px;
+}

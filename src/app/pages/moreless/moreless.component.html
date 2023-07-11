@@ -1,0 +1,54 @@
+<div *ngIf="text.length<=wordlimit">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let c of text">
+            <div class="row mt-2 mb-2">
+                <div class="col-lg-2" *ngIf="c.profile_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{ c.profile_path}}" alt="">
+                </div>
+                <div class="col-lg-10">
+                    <h3 class="text-white">{{c.original_name }}</h3>
+                    <p class="text-white">{{c.character}}</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div *ngIf="text.length>wordlimit-1 && !showMore">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let c of text.splice(wordlimit)">
+            <div class="row mt-2 mb-2">
+                <div class="col-lg-2" *ngIf="c.profile_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{ c.profile_path}}" alt="">
+                </div>
+                <div class="col-lg-10">
+                    <h3 class="text-white">{{c.original_name }}</h3>
+                    <p class="text-white">{{c.character}}</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <button type="button" class="btn btn-primary" (click)="showMore=true">Show More</button>
+</div>
+
+<div *ngIf="text.length>wordlimit-1 && showMore">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let c of text">
+            <div class="row mt-2 mb-2">
+                <div class="col-lg-2" *ngIf="c.profile_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{ c.profile_path}}" alt="">
+                </div>
+                <div class="col-lg-10">
+                    <h3 class="text-white">{{c.original_name }}</h3>
+                    <p class="text-white">{{c.character}}</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <button type="button" class="btn btn-primary" (click)="showMore=false">Show Less</button>
+</div>

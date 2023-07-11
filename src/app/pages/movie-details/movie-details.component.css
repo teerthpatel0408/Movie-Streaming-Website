@@ -1,0 +1,46 @@
+img{
+    width: 100%;
+    height: auto;
+}
+h1{
+    color: whitesmoke;
+    font-weight: bold;
+}
+p{
+    color: whitesmoke;
+}
+a{
+    background-color: red;
+    color: whitesmoke;
+}
+a:hover{
+    background-color: red;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+}
+
+.rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.rowimg{
+    max-height: 200px;
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+}
+
+.rowimg:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.largeposter{
+    max-height: 300px;
+}
+.rowposter::-webkit-scrollbar{
+    display: none;
+}
